@@ -8,6 +8,9 @@ app.use(cors());
 
 // req 요청에 관한 정보를 담음
 // res 응답에 관한 정보를 담음
+app.get('/', (req, res) => {
+    res.send('응답완료');
+});
 app.get('/gpx', (req, res) => {
     const GPX_URL = req.query.data;
     console.log(req);
